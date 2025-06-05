@@ -2,6 +2,7 @@ package com.BSN.book_network.history;
 
 import com.BSN.book_network.book.Book;
 import com.BSN.book_network.common.BaseEntity;
+import com.BSN.book_network.user.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
@@ -20,11 +21,16 @@ import lombok.experimental.SuperBuilder;
 @Entity
 public class BookTransactionHistory extends BaseEntity {
     @ManyToOne
-    @Column(name = "user_id")
-    private String userId;
-    @ManyToOne
     @JoinColumn(name = "book_id")
     private Book book;
+
+    @Column(name = "user_id")
+    private String userId;
+
+//    @ManyToOne
+//    @JoinColumn(name = "user_id")
+//    private User user;
+
     private boolean returned;
     private boolean returnApproved;
 

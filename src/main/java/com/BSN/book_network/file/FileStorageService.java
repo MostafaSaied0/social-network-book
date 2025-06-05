@@ -21,7 +21,6 @@ import static java.lang.System.currentTimeMillis;
 @RequiredArgsConstructor
 public class FileStorageService {
 
-    @Value("${application.file.uploads.photos-output-path}")
     private String fileUploadPath;
 
     public String saveFile(

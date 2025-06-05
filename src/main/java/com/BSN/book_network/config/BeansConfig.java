@@ -22,7 +22,7 @@ import java.util.Collections;
 public class BeansConfig {
     private final UserDetailsService userDetailsService;
 
-    @Bean
+
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(userDetailsService);
@@ -30,7 +30,7 @@ public class BeansConfig {
         return authProvider;
     }
 
-    @Bean
+
     public PasswordEncoder passwordEncoder(){
     return new BCryptPasswordEncoder();
     }
