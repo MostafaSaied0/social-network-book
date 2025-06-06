@@ -16,12 +16,11 @@ import io.swagger.v3.oas.annotations.servers.Server;
 @OpenAPIDefinition(
         info = @Info(
                 contact = @Contact(
-                        name = "Tester",
-                        email = "Tester123@test.net",
-                        url =  "https://testing.com/1stTest"
+                        name = "Mostafa Saied",
+                        email = "mostafa.saied909@gmail.com"
                 ),
                 description = "OpenApi documentation for Spring Security",
-                title = "OpenApi specification - Test",
+                title = "OpenApi specification - Mostafa",
                 version = "1.0",
                 license = @License(
                         name ="License name",
@@ -39,7 +38,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
         ),
                 @Server(
                         description = "PRO",
-                        url = "https://Testing.com/1stTest"
+                        url = "https://saied.com/1stTest"
                 )
         },
         security = {
@@ -55,12 +54,6 @@ import io.swagger.v3.oas.annotations.servers.Server;
         description = "bearer auth description",
         scheme = "bearer",
         type = SecuritySchemeType.OAUTH2 ,
-        flows = @OAuthFlows(
-                clientCredentials =
-                        @OAuthFlow(
-                                authorizationUrl = "http://localhost:9090/realms/book-social-network/protocol/openid-connect/auth"
-                        )
-        ),
         bearerFormat = "JWT",
         in = SecuritySchemeIn.HEADER
 )

@@ -7,5 +7,5 @@ spring:
 springdoc:
   default-produces-media-type: application/json
 server:
-  servelt:
+  servlet:
     context-path: /api/v1
